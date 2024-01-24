@@ -15,8 +15,13 @@ const props = defineProps({
   hide: {
     type: Boolean,
     required: false,
+  },
+  stretch: {
+    type: Boolean,
+    required: false
   }
 })
+let height = props.stretch ? '30em' : '6em';
 </script>
 
 <template>
@@ -30,6 +35,7 @@ const props = defineProps({
 <style scoped>
 .box {
   /* height: 9em; */
+  
 }
 .box:hover {
   filter: brightness(1.1);
@@ -39,7 +45,7 @@ const props = defineProps({
 }
 .sample {
   width: 7em;
-  height: 6em;
+  height: v-bind(height);
 }
 .color {
   background-color: v-bind(colors[0]);

@@ -20,6 +20,7 @@ const props = defineProps({
 <style scoped>
 .box {
   /* height: 9em; */
+  
 }
 .box:hover {
   filter: brightness(1.1);

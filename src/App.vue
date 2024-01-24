@@ -1,36 +1,33 @@
 <template>
   <div class="container">
-    <div class="blocks">
+
       <HeadBlock label="Matte" :colors="combineColors('#444')"/>
       <ColorBlock type="Dark" :colors="combineColors(darkColorMatte)"/>
       <ColorBlock type="Shadow" :colors="combineColors(shadowColorMatte)"/>
-      <ColorBlock type="Base" :colors="combineColors(baseColor)" hide/>
+      <ColorBlock type="Base" :colors="combineColors(baseColor)" class="span3" stretch/>
       <ColorBlock type="Highlight" :colors="combineColors(highlightColorMatte)"/>
       <ColorBlock type="Glare" :colors="combineColors(glareColorMatte)"/>
-    </div>
-    <div class="blocks">
-      <HeadBlock label="Glossy" :colors="combineColors('#444')"/>
+
+      <HeadBlock label="Glossy" :colors="combineColors('#aaa')"/>
       <ColorBlock type="" :colors="combineColors(darkColorGlossy)"/>
       <ColorBlock type="" :colors="combineColors(shadowColorGlossy)"/>
-      <ColorBlock type="" :colors="combineColors(baseColor)" hide/>
+      <!-- <ColorBlock type="" :colors="combineColors(baseColor)" hide/> -->
       <ColorBlock type="" :colors="combineColors(highlightColorGlossy)"/>
       <ColorBlock type="" :colors="combineColors(glareColorGlossy)"/>
-    </div>
-    <div class="blocks">
-      <HeadBlock label="Metallic" :colors="combineColors('#444')"/>
+
+      <HeadBlock label="Metallic" :colors="combineColors('#777')"/>
       <ColorBlock type="" :colors="combineColors(darkColorMetallic)"/>
       <ColorBlock type="" :colors="combineColors(shadowColorMetallic)"/>
-      <ColorBlock type="" :colors="combineColors(baseColor)"/>
+      <!-- <ColorBlock type="" :colors="combineColors(baseColor)"/> -->
       <ColorBlock type="" :colors="combineColors(highlightColorMetallic)"/>
       <ColorBlock type="" :colors="combineColors(glareColorMetallic)"/>
     </div>
-    <div class="controls">
+
       <div class="control">
         <label for="baseColor">Base Color&nbsp;</label>
         <input id="baseColor" type="color" v-model="baseColor" @input="transformColors"/>
       </div>
-    </div>
-  </div>
+
 </template>
 
 <script>
@@ -132,10 +129,11 @@ label {
   border: none;
   background: none;
   cursor: pointer;
-  width: 6em;
+  width: 9em;
   height: 5em;
   padding: 0;
   margin: 0;
+  box-shadow: rgba(0, 0, 0, 0.3) 6px 6px 8px;
 }
 #baseColor:hover {
   /* border: 2px solid red; */
@@ -156,23 +154,30 @@ label:active {
 }
 .container {
   grid-column: 2/3;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 0fr 2fr 2fr 2fr 2fr 2fr;
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 8px;
 }
 .blocks {
   display: flex;
-  flex-direction: row;
-}
-.controls {
-  margin-top: 1em;
-  display: flex;
-  justify-content: space-evenly;
   flex-direction: row;
 }
 .control {
   display: flex;
   flex-direction: row;
   align-items: center;
-  align-content: stretch
+  align-content: stretch;
+  grid-column: 2/3;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: monospace;
+  color: #fff;
+  text-shadow: rgba(0, 0, 0, 1) 2px 2px 6px;
+  margin-top: 1em;
+}
+.span3 {
+  grid-column: 4;
+  grid-row: 1 / 4;
 }
 </style>
