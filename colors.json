@@ -1,0 +1,66 @@
+[
+  {
+    "name": "sample_1",
+    "base": "#9ba1a6",
+    "highlight": "#e7ede9",
+    "glare": "#e2e7e5",
+    "shadow": "#848987",
+    "dark": "#616566"
+  },
+  {
+    "name": "sample_2",
+    "base": "#b0a78c",
+    "highlight": "#cbbeae",
+    "glare": "#d6ccb6",
+    "shadow": "#666663",
+    "dark": "#464f58"
+  },
+  {
+    "name": "sample_3",
+    "base": "#595859",
+    "highlight": "#8c837c",
+    "glare": "#a6a5a6",
+    "shadow": "#44464a",
+    "dark": "#3d454f"
+  },
+  {
+    "name": "sample_4",
+    "base": "#98a59d",
+    "highlight": "#b6c3b2",
+    "glare": "#bcc1b1",
+    "shadow": "#6f8986",
+    "dark": "#536e78"
+  },
+  {
+    "name": "sample_5",
+    "base": "#baaea5",
+    "highlight": "#cfc8c3",
+    "glare": "#dcd2c6",
+    "shadow": "#989ba3",
+    "dark": "#536781"
+  },
+  {
+    "name": "sample_6",
+    "base": "#cab11d",
+    "highlight": "#d3c25c",
+    "glare": "#e1d7a4",
+    "shadow": "#bb9616",
+    "dark": "#6c5507"
+  },
+  {
+    "name": "sample_7",
+    "base": "#a17e44",
+    "highlight": "#aa894e",
+    "glare": "#b6975b",
+    "shadow": "#6b522a",
+    "dark": "#512b04"
+  },
+  {
+    "name": "sample_8",
+    "base": "#890731",
+    "highlight": "#b31946",
+    "glare": "#e68290",
+    "shadow": "#520007",
+    "dark": "#43151b"
+  }
+]
